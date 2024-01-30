@@ -1,6 +1,6 @@
 from pathlib import Path
 
-path = Path("M:/vscPython/repository/goit-algo-hw-04/text.txt")
+path = Path("M:/vscPython/repository/goit-algo-hw-04/task1/text.txt")
 
 def total_salary(path):
     try:
@@ -15,7 +15,8 @@ def total_salary(path):
         result = (all_s,average_sum)
         return result
     except FileNotFoundError:
-        return print(f"{path} - not found")
+        print(f"{path} - not found")
+        return () 
 
 total, average = total_salary(path)
 print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
