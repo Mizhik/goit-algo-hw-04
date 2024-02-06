@@ -27,8 +27,10 @@ def change_contact(args, contacts):
         return "Contact change"
 def all_contact(contacts):
     if contacts:
+        result = ""
         for k,v in contacts.items():
-            print(f"{k} - {v}")
+            result += f"{k} - {v}\n"
+        return result.strip()
     else:
         return "Not found"
 
